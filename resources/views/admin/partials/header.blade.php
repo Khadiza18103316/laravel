@@ -248,18 +248,9 @@
                 <div class="pull-left">
                   <a href="#" class="btn btn-default btn-flat">Profile</a>
                 </div>
-
                 <div class="pull-right">
-                    <a class="dropdown-item" href="{{ route('logout') }}"
-                    onclick="event.preventDefault();
-                                  document.getElementById('logout-form').submit();">
-                     {{ Auth::user()->name }} | Sing Out
-                 </a>
-                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                    @csrf
-                </form>
-                </div>
-
+                    <a href="{{ route('admin.logout') }}" class="btn btn-default btn-flat">{{ auth::user()->name }} | Sign out</a>
+                  </div>
               </li>
             </ul>
           </li>
